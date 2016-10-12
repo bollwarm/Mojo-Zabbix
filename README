@@ -10,9 +10,9 @@ The more details ,please visting the Zabbix API documentation pages .
 - [Zabbix 2.0 API](http://www.zabbix.com/documentation/2.0/manual/appendix/api/api)
 - [Zabbix 2.2 API](https://www.zabbix.com/documentation/2.2/manual/api/reference)
 
-### Note
+### Test
 
-Module is compatible and tested with Zabbix less version 3.0
+The module is compatible and tested with Zabbix less version 3.0
 
 ### Example
 
