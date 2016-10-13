@@ -3,6 +3,11 @@ we build  only authentication and request methods and few
 helper methods to simplify calling methods such as
 create/get/update/delete/exists. 
 
+Mojo::Zabix - 是对zabbix api函数的简单打包，以便更易于用perl脚本进行
+访问操作zabbix。目前仅支持认证和请求方法，可以用其进行create/get
+/update/delete/exists方法调用，见例子。本模块基于Mojo::useragent，结果
+可以用Mojo:DOM进行处理和内容提取。
+
 The more details ,please visting the Zabbix API documentation pages .
 
 - [Zabbix API Wiki](http://www.zabbix.com/wiki/doc/api)
