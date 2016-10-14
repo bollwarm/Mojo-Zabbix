@@ -13,4 +13,14 @@ WriteMakefile(
 		'Time::HiRes'	=> 0,
 		'POSIX'		=> 0,
 	},
+       META_MERGE => {
+          'meta-spec' => { version => 2 },
+           resources   => {
+            repository => {
+                type => 'git',
+                url  => 'https://github.com/bollwarm/Mojo-Zabbix',
+                web  => 'http://ijz.me',
+            },
+        },
+    },
 );
