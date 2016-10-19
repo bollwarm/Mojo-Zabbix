@@ -1,18 +1,22 @@
 Revision history for Mojo-Zabbix
 
+0.05    2016-10-17/20
+             
+* fixed some bugs and renew debug and trace system.
+
 0.04    2016-10-13/16
 
-        add a example for get warn info;
+* add a example for get warn info;
 
 0.03    2016-10-13/16
 
-        add Chinese descriptadd Chinese descript
+*  add Chinese descriptadd Chinese descript
 
 0.02    2016-10-12/21
 
-        perldity and some descript changes
+* perldity and some descript changes
 
 0.01    2016-10-12/20
 
-        First version, released on an unsuspecting world.
+* First version, released on an unsuspecting world.
 

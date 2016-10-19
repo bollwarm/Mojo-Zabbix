@@ -26,6 +26,10 @@ print Dumper($z->get("host", {
 	filter => { status => 0}
 }));
 
+####  print the zabbix api version
+
+print $z->get("apiinfo.version",)->{result},"\n";
+
 #### A example for get the new warn message of triggerid.
 
 print getTriggers($z);

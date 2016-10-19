@@ -22,11 +22,13 @@ Mojo::Zabix - 是对zabbix api函数的简单打包，以便更易于用perl脚�
  
 =head1 VERSION
  
-Version 0.04
+Version 0.05 
+
+fixed some bugs and renew debug and trace system
  
 =cut
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 =head1 SYNOPSIS
 
@@ -273,7 +275,7 @@ sub auth {
         #confess $res->{error}->{data}
         die "$res->{error}->{data}\nError Code: $res->{error}->{code} 
             \nResponse: $res->{error}->{message}"
-           if defined $res->{error};
+          if defined $res->{error};
 
         #print "$res->{error}";
         $self->{Password} = '***';
@@ -291,23 +293,32 @@ sub next_id {
     return ++shift->{'Count'};
 }
 
-sub data_enc {
+sub int_debug {
     my ( $self, $data ) = @_;
+    my $tempass;
+    if (    defined $data->{'params'}
+        and ref( $data->{'params'} ) eq 'HASH'
+        and exists $data->{'params'}->{'password'} )
+    {
+        $tempass = $data->{'params'}->{'password'};
+        $data->{'params'}->{'password'} = '******';
+    }
     my $json = $self->{JSON}->encode($data);
 
     $self->_dbgmsg( "TX: " . $json )
       if $self->{Debug};
+    $data->{'params'}->{'password'} = $tempass
+      if ( ref( $data->{'params'} ) eq 'HASH'
+        and exists $data->{'params'}->{'password'} );
 
-    return $json;
 }
 
-sub data_dec {
-    my ( $self, $json ) = @_;
-
+sub out_debug {
+    my ( $self, $data ) = @_;
+    my $json = $self->{JSON}->encode($data);
     $self->_dbgmsg( "RX: " . $json )
       if $self->{Debug};
 
-    return $self->{JSON}->decode($json);
 }
 
 sub get {
@@ -358,7 +369,7 @@ sub http_request {
         id      => $self->next_id,
         ( $self->auth ),
     };
-    $self->data_enc($myjson) if $self->{Trace};
+    $self->int_debug($myjson) if $self->{Debug};
 
     my $res = $self->ua->post( $zrurl, json => $myjson );
 
@@ -374,8 +385,8 @@ sub http_request {
         $self->_dbgmsg( "Spent "
               . tv_interval( $self->{_call_start} )
               . "s on $object.$op" );
-        $self->data_enc( $res->res->json );
     }
+    $self->out_debug( $res->res->json ) if $self->{Debug};
     return $res->res->json;
 }
 

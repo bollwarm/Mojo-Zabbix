@@ -40,8 +40,11 @@ my $r = $z->get("host", {
     }
 );
 
+#### A example for print the zabbix api version 打印zabbix服务器版本.
 
-#### A example for get the new warn message of triggerid.
+print $z->get("apiinfo.version",)->{result},"\n";
+
+#### A example for get the new warn message of triggerid 打印新警告触发器.
 
 print getTriggers($z);
 sub getTriggers {
