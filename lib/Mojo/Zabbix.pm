@@ -9,7 +9,6 @@ use Carp;
 use Time::HiRes qw(gettimeofday tv_interval);
 use POSIX qw(strftime);
 
-require Exporter;
 
 =head1 NAME
 
@@ -22,13 +21,13 @@ Mojo::Zabix - 是对zabbix api函数的简单打包，以便更易于用perl脚�
  
 =head1 VERSION
  
-Version 0.05 
+Version 0.06 
 
 fixed some bugs and renew debug and trace system
  
 =cut
 
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 
 =head1 SYNOPSIS
 

@@ -1,5 +1,9 @@
 Revision history for Mojo-Zabbix
 
+0.06    2016-10-25/19
+
+* option docs
+
 0.05    2016-10-17/20
              
 * fixed some bugs and renew debug and trace system.
