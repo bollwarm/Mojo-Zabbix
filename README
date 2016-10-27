@@ -45,14 +45,14 @@ The module is compatible and tested with Zabbix less version 3.0
     }
     );
 
-#### A example for print the zabbix api version 打印zabbix服务器版本.
+** A example for print the zabbix api version 打印zabbix服务器版本.
 
-   print $z->get("apiinfo.version",)->{result},"\n";
+    print $z->get("apiinfo.version",)->{result},"\n";
 
-#### A example for get the new warn message of triggerid 打印新警告触发器.
+** A example for get the new warn message of triggerid 打印新警告触发器.
 
-   print getTriggers($z);
-   sub getTriggers {
+    print getTriggers($z);
+    sub getTriggers {
         my $z=shift;
         my $ysterday=localtime(time()-24*3600);
         my $r = $z->get("trigger", {
@@ -74,7 +74,7 @@ The module is compatible and tested with Zabbix less version 3.0
          }
 
        return $result;
-}
+    }
 
 
 The result all 结果示意: 
@@ -104,11 +104,11 @@ or some Im tool.
 
 ### Git repo
  
-[github](https://github.com/bollwarm/Mojo-Zabbix)
+[github] (https://github.com/bollwarm/Mojo-Zabbix)
  
 ### AUTHOR
  
-[orange] (linzhe@ijz.me),[blog](http://ijz.me)
+orange  (linzhe@ijz.me) ,[blog](http://ijz.me)
 
 ### License
 
