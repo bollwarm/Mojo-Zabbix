@@ -235,7 +235,7 @@ sub _json {
     unless ( defined $self->{JSON} ) {
         $self->{JSON} = JSON::PP->new;
         $self->{JSON}->ascii->pretty->allow_nonref->allow_blessed
-          ->allow_bignum;    # we use PP because of bignum
+          ->allow_bignum;
     }
     return $self->{JSON};
 }
@@ -262,7 +262,7 @@ sub auth {
     my $self = shift;
 
     if ( not defined $self->{Auth} ) {
-        $self->{Auth} = '';    # avoiding recursion
+        $self->{Auth} = '';   
         my $res = $self->http_request(
             'user', 'login',
             {
