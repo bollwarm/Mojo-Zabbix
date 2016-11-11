@@ -1,9 +1,12 @@
-## Mojo::Zabbix is a  simple perl wrapper of Zabbix API. 
-we build  only authentication and request methods and few 
-helper methods to simplify calling methods such as
-create/get/update/delete/exists. 
+##  Mojo::Zabbix 
 
-## Mojo::Zabix - 是对zabbix api函数的简单打包，以便更易于用perl脚本进行
+  IT is a  simple perl wrapper of Zabbix API. We build only authentication 
+and request methods and few helper methods to simplify calling methods 
+such ascreate/get/update/delete/exists. 
+
+## 中文介绍
+
+   Mojo::Zabix - 是对zabbix api函数的简单打包，以便更易于用perl脚本进行
 访问操作zabbix。目前仅支持认证和请求方法，可以用其进行create/get
 /update/delete/exists方法调用，见例子。本模块基于Mojo::useragent，结果
 可以用Mojo:DOM进行处理和内容提取。
