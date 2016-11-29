@@ -114,7 +114,7 @@ or some Im tool.
 
 ## AUTHOR
  
-[mail to orange]  (linzhe@ijz.me) 
+mail to orange: <bollwarm@ijz.me>
 [web|blog](http://ijz.me)
 
 ## License
