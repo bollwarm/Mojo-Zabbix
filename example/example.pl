@@ -57,6 +57,7 @@ sub getTriggers {
        return $result;
 }
 
+=encoding utf8
 =pod
 
 The result all:

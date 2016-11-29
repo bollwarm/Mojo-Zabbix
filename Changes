@@ -1,7 +1,9 @@
 Revision history for Mojo-Zabbix
 
-0.06    2016-10-25/19
+0.06    2016-11-29/18
+* fix pod style format error
 
+0.06    2016-10-25/19
 * option docs
 
 0.05    2016-10-17/20
