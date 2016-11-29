@@ -10,8 +10,9 @@ such ascreate/get/update/delete/exists.
 访问操作zabbix。目前仅支持认证和请求方法，可以用其进行create/get
 /update/delete/exists方法调用，见例子。本模块基于Mojo::useragent，结果
 可以用Mojo:DOM进行处理和内容提取。
+   本模块依赖Mojo，建议使用cpan包安装 cpanm Mojo::Zabbix
 
-The more details ,please visting the Zabbix API documentation pages .
+###The more details ,please visting the Zabbix API documentation pages .
 
 - [Zabbix API Wiki](http://www.zabbix.org/)
 - [Zabbix 1.8 API](http://www.zabbix.com/documentation/1.8/api)
@@ -27,7 +28,7 @@ The module is compatible and tested with Zabbix less version 3.0
 
 本模块目前仅在3.0以前的模块下测试，3.0以上版本理论上应该可以使用，但是未严格测试
 
-### Example
+## Example
 
      use Mojo::Zabbix;
 
@@ -80,7 +81,7 @@ The module is compatible and tested with Zabbix less version 3.0
       }
 
 
-### The result all 结果示意: 
+## The result all 结果示意: 
 
     xxx.xxx.xx.55: {HOST.CONN}服务器的84端口down
     xxx.xxx.xx.55: {HOST.CONN}服务器的81端口down
@@ -94,7 +95,7 @@ The module is compatible and tested with Zabbix less version 3.0
     xxx.xxx.xx.56: 磁盘sda利用率超过95%，当前值为{ITEM.LASTVALUE}
     xxx.xxx.xx.57: 磁盘sda利用率超过95%，当前值为{ITEM.LASTVALUE}
 
-### More 更多说明
+## More 更多说明
 
 wo can add the program to crontab  and gain the result for mail
 or some Im tool.
@@ -106,15 +107,17 @@ or some Im tool.
 本模块有个高级函数打包模块Mojo::Zabbix:APP 可以更方便使用，建议可
 参考使用。
 
-### Git repo
+## Git repo
  
 [github] (https://github.com/bollwarm/Mojo-Zabbix)
- 
-### AUTHOR
- 
-orange  (linzhe@ijz.me) ,[blog](http://ijz.me)
+[oschina] (https://git.oschina.net/ijz/Mojo-Zabbix.git) 
 
-### License
+## AUTHOR
+ 
+[mail to orange]  (linzhe@ijz.me) 
+[web|blog](http://ijz.me)
+
+## License
 
 This software is copyright (c) 2016 by oragnge.
 
