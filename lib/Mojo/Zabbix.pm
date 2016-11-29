@@ -9,6 +9,7 @@ use Carp;
 use Time::HiRes qw(gettimeofday tv_interval);
 use POSIX qw(strftime);
 
+=encoding utf8
 
 =head1 NAME
 
@@ -21,38 +22,39 @@ Mojo::Zabix - 是对zabbix api函数的简单打包，以便更易于用perl脚�
  
 =head1 VERSION
  
-Version 0.06 
+Version 0.07 
 
 fixed some bugs and renew debug and trace system
  
 =cut
 
-our $VERSION = '0.06';
+our $VERSION = '0.07';
 
 =head1 SYNOPSIS
 
-use Mojo::Zabbix;
-
-my $z = Net::Zabbix->new(
-        url => "https://server/zabbix/",
-        username => 'user',
-        password => 'pass',
-        verify_ssl => 0,
-        debug => 1,
-        trace => 0,
-);
-
-my $r = $z->get("host", {
-        filter => undef,
-        search => {
-            host => "test",
-        },
-    }
-);
-
+  use Mojo::Zabbix;
+  
+  my $z = Net::Zabbix->new(
+          url => "https://server/zabbix/",
+          username => 'user',
+          password => 'pass',
+          verify_ssl => 0,
+          debug => 1,
+          trace => 0,
+  );
+  
+  my $r = $z->get("host", {
+          filter => undef,
+          search => {
+              host => "test",
+          },
+      }
+  );
+  
 =cut 
 
 # useful defaults
+
 use constant {
     Z_AGENT_PORT  => 10050,
     Z_SERVER_PORT => 10051,
@@ -439,7 +441,7 @@ L<http://search.cpan.org/dist/Mojo-Zabbix/>
 =head1 Git repo
  
 L<https://github.com/bollwarm/Mojo-Zabbix.git>
- 
+
 =head1 ACKNOWLEDGEMENTS
  
  
