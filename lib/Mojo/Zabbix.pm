@@ -441,7 +441,7 @@ L<http://search.cpan.org/dist/Mojo-Zabbix/>
 =head1 Git repo
  
 L<https://github.com/bollwarm/Mojo-Zabbix.git>
-
+L<https://git.oschina.net/ijz/Mojo-Zabbix>
 =head1 ACKNOWLEDGEMENTS
  
  

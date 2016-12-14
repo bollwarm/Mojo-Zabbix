@@ -14,13 +14,13 @@ such ascreate/get/update/delete/exists.
 
 ###The more details ,please visting the Zabbix API documentation pages .
 
-- [Zabbix API Wiki](http://www.zabbix.org/)
-- [Zabbix 1.8 API](http://www.zabbix.com/documentation/1.8/api)
-- [Zabbix 2.0 API](http://www.zabbix.com/documentation/2.0/)
-- [Zabbix 2.2 API](https://www.zabbix.com/documentation/2.2/)
-- [Zabbix 3.0 API](https://www.zabbix.com/documentation/3.0/)
-- [Zabbix 3.2 API](https://www.zabbix.com/documentation/3.2/)
-- [Zabbix 3.4 API](https://www.zabbix.com/documentation/3.4/)
+    - [Zabbix API Wiki](http://www.zabbix.org/)
+    - [Zabbix 1.8 API](http://www.zabbix.com/documentation/1.8/api)
+    - [Zabbix 2.0 API](http://www.zabbix.com/documentation/2.0/)
+    - [Zabbix 2.2 API](https://www.zabbix.com/documentation/2.2/)
+    - [Zabbix 3.0 API](https://www.zabbix.com/documentation/3.0/)
+    - [Zabbix 3.2 API](https://www.zabbix.com/documentation/3.2/)
+    - [Zabbix 3.4 API](https://www.zabbix.com/documentation/3.4/)
 
 ### Test
 
