@@ -53,7 +53,7 @@ our $VERSION = '0.07';
   
 =cut 
 
-# useful defaults
+# useful defaults Zabbix Constant list:
 
 use constant {
     Z_AGENT_PORT  => 10050,
