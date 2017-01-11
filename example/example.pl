@@ -73,4 +73,20 @@ The result show  all for pratice example :
  xxx.xxx.xx.57: 磁盘sda利用率超过95%，当前值为{ITEM.LASTVALUE}
  
 wo can add the program to crontab  and gain the result for mail or some IM tool.
+
+基于本模块的，通过webqq或者webwx实时获取hosts监控数据的实例
+
+XX_10.2.7.20_
+实时数据:
+
+ESTABLISHED链接 - { connections.status[ESTABLISHED] } : 9 
+SYN链接 - { connections.status[SYN] } : 0 
+网卡$1的出口流量 - { net.if.out[bond0] } : 5176 
+负载 - { system.cpu.load[,avg1] } : 0.000000 
+$1剩余inode百分比 - { vfs.fs.inode[/,pfree] } : 99.788211 
+$1的剩余百分比 - { vfs.fs.size[/,pfree] } : 99.269724 
+可用内存 - { vm.memory.size[available] } : 261874798592 
+内存利用率 - { vm.memory.size[pused] } : 4.720467 
+内存总空间 - { vm.memory.size[total] } : 270763327488 
+
 =cut
