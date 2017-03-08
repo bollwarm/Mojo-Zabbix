@@ -22,13 +22,13 @@ Mojo::Zabix - 是对zabbix api函数的简单打包，以便更易于用perl脚�
  
 =head1 VERSION
  
-Version 0.07 
+Version 0.08 
 
-fixed some bugs and renew debug and trace system
+fixed some bugs and timetout
  
 =cut
 
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 
 =head1 SYNOPSIS
 
@@ -225,7 +225,7 @@ sub ua {
 
         $self->{UserAgent} = Mojo::UserAgent->new;
         $self->{UserAgent}->transactor->name("Mojo::Zabbix");
-        $self->{UserAgent}->inactivity_timeout(3600);
+        $self->{UserAgent}->inactivity_timeout(10);
     }
 
     return $self->{UserAgent};
@@ -274,7 +274,7 @@ sub auth {
         );
 
         #confess $res->{error}->{data}
-        die "$res->{error}->{data}\nError Code: $res->{error}->{code} 
+        warn "$res->{error}->{data}\nError Code: $res->{error}->{code} 
             \nResponse: $res->{error}->{message}"
           if defined $res->{error};
 
@@ -376,8 +376,8 @@ sub http_request {
 
     unless ( $res->success ) {
         my $err = $res->error;
-        die "$err->{code} response: $err->{message}" if $err->{code};
-        die "Connection error: $err->{message}";
+        warn "$err->{code} response: $err->{message}" if $err->{code};
+        warn "Connection error: $err->{message}";
 
     }
 
