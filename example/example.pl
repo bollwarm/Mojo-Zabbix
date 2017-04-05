@@ -89,4 +89,6 @@ $1的剩余百分比 - { vfs.fs.size[/,pfree] } : 99.269724
 内存利用率 - { vm.memory.size[pused] } : 4.720467 
 内存总空间 - { vm.memory.size[total] } : 270763327488 
 
+
+
 =cut
