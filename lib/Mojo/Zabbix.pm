@@ -38,7 +38,6 @@ our $VERSION = '0.08';
           url => "https://server/zabbix/",
           username => 'user',
           password => 'pass',
-          verify_ssl => 0,
           debug => 1,
           trace => 0,
   );
@@ -167,7 +166,6 @@ sub new {
         url        => \$required,
         trace      => 0,
         debug      => 0,
-        verify_ssl => 1,
         username   => \$required,
         password   => \$required,
         @_,
@@ -194,7 +192,6 @@ sub new {
         Trace       => $args->{trace} ? 1 : 0,
         User        => $args->{username},
         Password    => $args->{password},
-        VerifySSL   => $args->{verify_ssl},
         _call_start => 0,
     }, $class;
 
