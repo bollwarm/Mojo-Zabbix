@@ -10,7 +10,7 @@ use POSIX qw(strftime);
 require Exporter;
 
 our @ISA    = qw(Exporter);
-our @EXPORT = qw(initZ pVersion getAllhost getname getItem getAlert  getEvents pHitems pTriggers);
+our @EXPORT = qw(initZ pVersion getHostGroup  getAllhost getname getItem getAlert  getEvents pHitems pTriggers);
 
 =encoding utf8
 
@@ -237,6 +237,24 @@ return  $r->{'result'}->[0]->{host} if $r->{'result'};
 
 }
 
+sub getHostGroup {
+
+    my ( $z, $hostid) = @_;
+    my $r = $z->get(
+        "hostgroup",
+        {
+
+            hostids => $hostid,
+            output=> ["name"],
+
+        },
+    );
+
+return  $r->{'result'}->[0]->{name} if $r->{'result'};
+
+
+}
+
 sub getHisv {
 
     my ( $z, $hostid, $itemid, $btime, $ltime ) = @_;
@@ -298,12 +316,18 @@ sub getname {
             filter => {
                 host => $host,
             },
-            output => ["name"],
+            output => ["hostid","name"],
         },
     );
 
     #use Data::Dumper;
-    return $r->{'result'}->[0]->{'name'} if $r->{'result'};
+    if($r->{'result'}) {
+    my $hostid= $r->{'result'}->[0]->{'hostsid'};
+    my $groupname= getHostGroup($z,$hostid);
+
+    return "$r->{'result'}->[0]->{'name'} $groupname";
+    }
+     
 }
 #### 获取所有的主机列表
 
@@ -315,14 +339,15 @@ sub getAllhost {
         {
             filter => undef,
             search => undef,
-            output => [ "host", "name" ],
+            output => [ "hostid","host", "name" ],
         },
     );
 
     my $hresult;
     my $host = $r->{'result'};
     for (@$host) {
-        $hresult .= $_->{'host'} . ": $_->{'name'}" . "\n";
+        my $groupname=getHostGroup( $z,$_->{'hostid'});
+        $hresult .= $_->{'host'} . ": $groupname" ."\n";
     }
 
     return $hresult;
@@ -347,7 +372,7 @@ sub getAllhostid {
         push(@{$hostsids},$_->{'hostid'});
     }
 
-    return $hostsids;;
+    return $hostsids;
 }
 
 ####获取所有的有问题触发警告信息,返回一个包含时间、主机ip和描述的哈希引用
