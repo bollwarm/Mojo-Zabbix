@@ -20,14 +20,6 @@ Mojo::Zabbix::APP - The application module of Mojo-Zabbix .Using to get
 data from zabbix data include host,items, Triggers and warns and so on.
 
 
-=head1 VERSION
-
-Version 0.05
-
-=cut
-
-our $VERSION = '0.05';
-
 =head1 SYNOPSIS
 
     use Mojo::Zabbix::APP;
