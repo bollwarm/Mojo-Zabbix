@@ -70,6 +70,7 @@ data from zabbix data include host,items, Triggers and warns and so on.
 =cut
 
 #### 初始化的Mojo::zabbix ，必须安装Mojo::zabbix模块,可用cpanm Mojo::zabbix 安装
+
 my %EVcache;
 my %HTcache;
 my %Vcache;
@@ -544,7 +545,7 @@ sub getAlert {
 
         },
     );
-    my $hresult = Dumper($r);
+#    my $hresult = Dumper($r);
     return $hresult;
 }
 
