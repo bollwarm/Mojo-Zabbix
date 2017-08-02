@@ -199,7 +199,7 @@ or some Im tool.
 
 ## AUTHOR
  
-mail to orange: <bollwarm@ijz.me>
+[mail to me](bollwarm@ijz.me)
 
 [web|blog](http://ijz.me)
 
