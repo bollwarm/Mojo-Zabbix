@@ -186,8 +186,8 @@ Get data from zabbix data include host，items, Triggers and warns and so on.
 wo can add the program to crontab  and gain the result for mail
 or some Im tool.
 
-我们可以通过cron定时调用程序获得结果，也可以通过IM工具（qq，微信，
-目前有个webqq（https://github.com/sjdy521/Mojo-Webqq）的插件,交互
+我们可以通过cron定时调用程序获得结果，也可以通过IM工具（qq，微信），
+目前有个[Mojo-webqq](https://github.com/sjdy521/Mojo-Webqq)的插件,交互
 性获取监控数据。
 
 
