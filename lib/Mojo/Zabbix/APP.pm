@@ -412,7 +412,6 @@ sub getTriggers {
         my $r = $z->get("trigger",$getv2);
         my $host=$r->{'result'};
         for (@$host) {
-        if($time) 
         my $hostid   = gethostID( $z, $_->{'host'});
         my $etime;
         if($time){
