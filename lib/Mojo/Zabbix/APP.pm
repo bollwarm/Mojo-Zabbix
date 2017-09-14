@@ -460,7 +460,7 @@ sub getTgtime {
       $ysterday = time() - $time * 60 ;
      } else {
       
-      $ysterday = time() - 20 * 3600 unless /$time/;
+      $ysterday = time() - 20 * 3600;
      
       }   
     my $vkey     = $tgid . $hostid;
