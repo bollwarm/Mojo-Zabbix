@@ -152,16 +152,16 @@ sub pTriggers {
     my $result;
     
     if($time){ 
-      $reslut = getTriggers($z,$time);
+      $result = getTriggers($z,$time);
     }else{
-      $reslut = getTriggers($z);
+      $result = getTriggers($z);
 
      }
-    $info = "\n\nWarning info of Triggers \n\n";
+ #   $info = "\n\nWarning info of Triggers \n\n";
 
-    for ( sort { $b <=> $a } keys %{$reslut} ) {
+    for ( sort { $b <=> $a } keys %{$result} ) {
 
-        $info .= "$reslut->{$_}";
+        $info .= "$result->{$_}";
 
     }
     return $info;
@@ -561,7 +561,7 @@ sub getAlert {
 
         },
     );
-#    my $hresult = Dumper($r);
+    my $hresult = Dumper($r);
     return $hresult;
 }
 
