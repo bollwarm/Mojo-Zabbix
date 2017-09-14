@@ -10,7 +10,7 @@ use Time::HiRes qw(gettimeofday tv_interval);
 use POSIX qw(strftime);
 
 
-our $VERSION = '0.11';
+our $VERSION = '0.12';
 
 
 # useful defaults Zabbix Constant list:
