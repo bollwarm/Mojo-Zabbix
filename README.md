@@ -12,7 +12,7 @@ such ascreate/get/update/delete/exists.
 可以用Mojo:DOM进行处理和内容提取。
    本模块依赖Mojo，建议使用cpan包安装 cpanm Mojo::Zabbix
 
-###The more details ,please visting the Zabbix API documentation pages .
+### The more details ,please visting the Zabbix API documentation pages .
 
     - [Zabbix API Wiki](http://www.zabbix.org/)
     - [Zabbix 1.8 API](http://www.zabbix.com/documentation/1.8/api)
