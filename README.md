@@ -193,9 +193,9 @@ or some Im tool.
 
 ## Git repo
  
-[github] (https://github.com/bollwarm/Mojo-Zabbix)
+[github](https://github.com/bollwarm/Mojo-Zabbix)
 
-[oschina] (https://git.oschina.net/ijz/Mojo-Zabbix.git) 
+[oschina](https://gitee.com/ijz/Mojo-Zabbix.git) 
 
 ## AUTHOR
  
