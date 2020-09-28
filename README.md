@@ -204,15 +204,15 @@ or some Im tool.
 
 ## Git repo
  
-[github](https://github.com/bollwarm/Mojo-Zabbix)
+[Github](https://github.com/bollwarm/Mojo-Zabbix)
 
-[oschina](https://gitee.com/ijz/Mojo-Zabbix.git) 
+[OSChina](https://gitee.com/ijz/Mojo-Zabbix.git) 
 
 ## AUTHOR
  
-[mail to me](bollwarm@ijz.me)
+[Mail to me](bollwarm@ijz.me)
 
-[web|blog](http://ijz.me)
+[Web|Blog](https://ijz.me)
 
 ## License
 
