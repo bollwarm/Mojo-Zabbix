@@ -23,12 +23,13 @@ such ascreate/get/update/delete/exists.
     - [Zabbix 3.2 API](https://www.zabbix.com/documentation/3.2/)
     - [Zabbix 3.4 API](https://www.zabbix.com/documentation/3.4/)
     - [Zabbix 4.0 API](https://www.zabbix.com/documentation/4.0/)
+    - [Zabbix 5.0 API](https://www.zabbix.com/documentation/5.0/)
 
 ### Test
 
 The module is compatible and tested with Zabbix less version 4.0
 
-本模块目前仅在4.0以前的模块下测试，4.0下基本可以使用，4.x可以使用，但是未严格测试
+本模块目前仅在5.0以前的模块下测试，5.0下基本可以使用，但是未严格测试
 
 ## Example
 

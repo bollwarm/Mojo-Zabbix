@@ -17,6 +17,7 @@
         print "\n$name $url $user $pass\n";
         my $z; 
         $url=shift;
+        #print "$url\n";
         eval { $z = initZ( $url, $user, $pass )};
 
         if ($@) {
@@ -31,11 +32,11 @@
 
             ## Print all host lists。 获取所有的主机列表
 
-           print getAllhost($z);
+          # print getAllhost($z);
             #print getAlert($z); 
             ## Print warning info of Triggers。打印取得的所有触发器告警信息
-           # print pTriggers($z);
-           # print getEvents($z);
+           print pTriggers($z);
+            #print getEvents($z);
             ## Print the history data of given items, default for past 24 hours.
             ## 打印给定时间段的item历史数据，如果默认不给时间默认为过去24小时内的
           #pHitems($z);
@@ -45,4 +46,4 @@
     }
 
 __DATA__
-test https://zabbix.cmsn.ysten.com/zabbix zxyw zxyw!yst2#^
+test https://zabbix.test.com/zabbix test test123

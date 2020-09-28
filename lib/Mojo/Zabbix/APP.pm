@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use Mojo::Zabbix;
 use utf8;
-
+use Data::Dumper;
 use POSIX qw(strftime);
 
 require Exporter;
