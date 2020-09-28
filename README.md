@@ -27,7 +27,7 @@ such ascreate/get/update/delete/exists.
 
 ### Test
 
-The module is compatible and tested with Zabbix less version 4.0
+The module is compatible and tested with Zabbix less version 5.0
 
 本模块目前仅在5.0以前的模块下测试，5.0下基本可以使用，但是未严格测试
 
