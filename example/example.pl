@@ -3,8 +3,6 @@
 
     my @myzinfo = <DATA>;    ##(get zabbix info from __DATA__ )
 # Define for debug and traceing processe infomaition。（打开调试和跟踪）
-    my $DEBUG = 1;
-    my $TRACE = 1;
 
 #my @myzinfo = ('test1  http://test1/zabbix    testuser pass');
 # @可以定义为多行数据，格式按照这种，一个zabbix 服务地址一个
